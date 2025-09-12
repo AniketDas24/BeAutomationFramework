@@ -1,0 +1,17 @@
+[
+  {
+    "param": {
+      "access_key": "ef9fb377cad810f298b2e994a56a1803"
+    },
+    "description": "1st Test",
+    "endpoint": "/v1/eod?symbols=AAPL",
+    "payload": null,
+    "httpMethord": "GET",
+    "responseTest": {
+      "expectedStatusCode": 200,
+      "jsonPathAssertions": {
+
+      }
+    }
+  }
+]
