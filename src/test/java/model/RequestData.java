@@ -11,7 +11,9 @@ import java.util.HashMap;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class ResponseTest {
-    public Integer expectedStatusCode;
-    public HashMap<String, String> jsonPathAssertions;
+public class RequestData {
+    private HashMap<String, String> param;
+    private String endpoint;
+    private Object payload;
+    private httpMethord httpMethord;
 }
