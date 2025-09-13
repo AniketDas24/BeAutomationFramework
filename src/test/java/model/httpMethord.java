@@ -1,6 +1,6 @@
 package model;
 
-public enum HTTP_METHORD {
+public enum httpMethord {
     POST,
     PUT,
     GET,

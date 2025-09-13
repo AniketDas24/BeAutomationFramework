@@ -1,16 +1,36 @@
 [
   {
-    "param": {
-      "access_key": "ef9fb377cad810f298b2e994a56a1803"
+    "requestData": {
+      "param": {
+      },
+      "endpoint": "/v1/eod?symbols=AAPL",
+      "payload": null,
+      "httpMethord": "GET"
     },
     "description": "1st Test",
-    "endpoint": "/v1/eod?symbols=AAPL",
-    "payload": null,
-    "httpMethord": "GET",
-    "responseTest": {
+    "responseData": {
       "expectedStatusCode": 200,
       "jsonPathAssertions": {
-
+        "pagination.limit": "100",
+        "pagination.offset": "0",
+        "pagination.count": "100",
+        "pagination.total": "100"
+      }
+  }
+  },
+  {
+    "requestData": {
+      "param": {
+        "access_key": "invalidAccessKey"
+      },
+      "endpoint": "/v1/eod?symbols=AAPL",
+      "payload": null,
+      "httpMethord": "GET"
+    },
+    "description": "2nd Test",
+    "responseData": {
+      "expectedStatusCode": 400,
+      "jsonPathAssertions": {
       }
     }
   }
